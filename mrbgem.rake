@@ -8,7 +8,7 @@ MRuby::Gem::Specification.new('mruby-yaml') do |spec|
 	spec.linker.libraries << 'yaml'
   require 'open3'
 
-  yaml_version = "0.1.6"
+  yaml_version = "0.1.7"
   yaml_dir = "#{build_dir}/yaml-#{yaml_version}"
 
   def run_command env, command
