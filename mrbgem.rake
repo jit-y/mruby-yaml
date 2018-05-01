@@ -34,7 +34,6 @@ MRuby::Gem::Specification.new('mruby-yaml') do |spec|
     Dir.chdir yaml_dir do
       e = {
         'CC' => "#{spec.build.cc.command} #{spec.build.cc.flags.join(' ')}",
-        'CXX' => "#{spec.build.cxx.command} #{spec.build.cxx.flags.join(' ')}",
         'LD' => "#{spec.build.linker.command} #{spec.build.linker.flags.join(' ')}",
         'AR' => spec.build.archiver.command,
         'PREFIX' => "#{yaml_dir}/build"
