@@ -4,7 +4,7 @@ MRuby::Gem::Specification.new('mruby-yaml') do |spec|
 	spec.version = '0.1.0'
 	spec.description = 'YAML gem for mruby'
 	spec.homepage = 'https://github.com/AndrewBelt/mruby-yaml'
-	
+
 	spec.linker.libraries << 'yaml'
   require 'open3'
 
@@ -25,7 +25,7 @@ MRuby::Gem::Specification.new('mruby-yaml') do |spec|
   if ! File.exists? yaml_dir
     Dir.chdir(build_dir) do
       e = {}
-      run_command e, "curl http://pyyaml.org/download/libyaml/yaml-#{yaml_version}.tar.gz | tar -xzv"
+      run_command e, "curl -L https://pyyaml.org/download/libyaml/yaml-#{yaml_version}.tar.gz | tar -xzv"
       run_command e, "mkdir #{yaml_dir}/build"
     end
   end

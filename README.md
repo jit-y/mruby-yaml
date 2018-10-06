@@ -2,7 +2,7 @@
 
 #### YAML gem for [mruby](https://github.com/mruby/mruby)
 
-mruby-yaml wraps [libyaml](http://pyyaml.org/wiki/LibYAML) and therefore complies with the YAML 1.1 standard. File IO is not supported, as this would create a dependency on other mruby gems.
+mruby-yaml wraps [libyaml](https://pyyaml.org/wiki/LibYAML) and therefore complies with the YAML 1.1 standard. File IO is not supported, as this would create a dependency on other mruby gems.
 
 ### Defines
 | Name                             | Default | Description                    |
@@ -21,7 +21,7 @@ If you need to check if a feature is supported at runtime, replace `MRUBY_YAML_`
 ```ruby
 if YAML::SUPPORT_NULL
   YAML.load('null') == nil
-else  
+else
   YAML.load('null') == 'null'
 end
 ```
